@@ -1,0 +1,41 @@
+.todo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding-block: 20px;
+
+  &__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      visibility: hidden;
+    }
+  }
+
+  &__action-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-grey);
+
+    &#{&}--delete {
+      &:hover {
+        color: var(--color-danger);
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-primary);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .todo__actions {
+      visibility: visible;
+    }
+  }
+}

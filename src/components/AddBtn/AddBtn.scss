@@ -1,0 +1,13 @@
+@import './../../mixins';
+
+.add-btn {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  padding: var(--common-padding);
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+
+  @include common-input;
+}

@@ -1,0 +1,93 @@
+@import '~normalize.css/normalize';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Kanit:wght@400;500;700&display=swap');
+
+:root {
+  --color-primary: #6c63ff;
+  --color-primary-darker: #5b54e6;
+  --color-w: #f7f7f7;
+  --color-b: #252525;
+  --color-grey: #cdcdcd;
+  --color-danger: #e50000;
+
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Kanit', sans-serif;
+
+  --border-radius: 5px;
+  --common-padding: 10px;
+}
+
+h1,
+h2 {
+  font-family: var(--font-primary);
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-w);
+  font-size: 16px;
+  padding-inline: 20px;
+
+  @media (min-width: 768px) {
+    padding-inline: 150px;
+  }
+
+  @at-root html[data-theme='dark'] & {
+    background-color: var(--color-b);
+    color: var(--color-w);
+  }
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+
+  .search {
+    width: 100%;
+    flex-grow: 1;
+
+    @media (min-width: 768px) {
+      width: auto;
+    }
+  }
+
+  .dropdown {
+    width: auto;
+    flex-grow: 1;
+
+    @media (min-width: 768px) {
+      flex-grow: initial;
+      min-width: 8rem;
+    }
+  }
+
+  .theme-btn {
+  }
+}
+
+.app-wrapper {
+  min-height: 575px;
+  position: relative;
+  padding-bottom: 45px;
+
+  .add-btn {
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

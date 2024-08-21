@@ -1,0 +1,22 @@
+@import './../../mixins';
+
+.theme-btn {
+  &__btn {
+    background-color: var(--color-primary);
+    color: var(--color-w);
+    padding: calc(var(--common-padding) - 8px);
+    border-radius: var(--border-radius);
+    border: none;
+    outline: none;
+    font-size: 0;
+    
+
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+    
+
+    @include common-input;
+  }
+}

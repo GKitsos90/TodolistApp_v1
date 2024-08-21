@@ -1,0 +1,52 @@
+@import './../../mixins';
+
+.checkbox {
+  width: 100%;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-primary);
+
+    img {
+      width: 20px;
+    }
+
+    @include common-input;
+  }
+
+  img {
+    display: none;
+  }
+
+  &--checked {
+    img {
+      display: block;
+    }
+    
+    & .checkbox__icon-wrapper {
+      background-color: var(--color-primary);
+    }
+  }
+}

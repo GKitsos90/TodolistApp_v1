@@ -1,0 +1,46 @@
+.add-note-modal-overlay {
+  position: fixed;
+  inset: 0px;
+  display: block;
+  background: rgba(37, 37, 37, 0.70);
+}
+
+.add-note-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  
+  @media (min-width: 768px) {
+    width: 500px;
+    top: 21.5%;
+  }
+
+  background-color: var(--color-w);
+  padding: 18px 30px;
+  border-radius: 16px;
+
+  @at-root html[data-theme='dark'] & {
+    background-color: var(--color-b);
+    border: 1px solid var(--color-w);
+  }
+
+  &__title {
+    margin-block: 0 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 128px;
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}

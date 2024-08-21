@@ -1,0 +1,27 @@
+@import './../../../mixins';
+
+.dropdown-header {
+  background-color: var(--color-primary);
+  color: var(--color-w);
+  padding: var(--common-padding);
+  text-transform: capitalize;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    display: block;
+    width: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-left: 27px;
+  }
+
+  @include common-input;
+}

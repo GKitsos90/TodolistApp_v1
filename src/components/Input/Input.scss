@@ -1,0 +1,40 @@
+.input-wrapper {
+  padding: 8px 16px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  display: flex;
+
+  @at-root html[data-theme='dark'] & {
+    border-color: var(--color-w);
+  }
+
+
+  .input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    padding: 0;
+
+    @at-root html[data-theme='dark'] & {
+      color: var(--color-w);
+    }
+
+    &::placeholder {
+      color: #c3c1e5;
+
+      @at-root html[data-theme='dark'] & {
+        color: var(--color-w);
+      }
+    }
+
+    &__icons {
+      font-size: 0;
+      color: var(--color-primary);
+
+      @at-root html[data-theme='dark'] & {
+        color: var(--color-w);
+      }
+    }
+  }
+}

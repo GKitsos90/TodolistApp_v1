@@ -1,0 +1,31 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  .dropdown-container {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .dropdown-header {
+    &__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--open {
+    .dropdown-container {
+      visibility: visible;
+    }
+
+    .dropdown-header {
+      &__icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
